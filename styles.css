@@ -90,7 +90,7 @@ html[data-lang="tr"] [lang="en"]:not(html) { display: none !important; }
 .header .btn { padding: 9px 18px; font-size: 14px; }
 
 /* ---------- Hero ---------- */
-.hero { position: relative; padding: 110px 0 96px; overflow: hidden; }
+.hero { position: relative; padding: 110px 0 72px; overflow: hidden; }
 .hero::before {
   content: ''; position: absolute; inset: 0; z-index: -1;
   background-image: radial-gradient(var(--border) 1px, transparent 1px);
@@ -136,39 +136,9 @@ h1 .accent { color: var(--purple); }
 
 /* ---------- Sections ---------- */
 section { scroll-margin-top: 80px; }
-.section { padding: 96px 0; }
+.section { padding: 24px 0 96px; }
 .section.soft { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--coral); margin-bottom: 12px; }
 h2 { font-size: clamp(30px, 4vw, 42px); line-height: 1.15; letter-spacing: -1px; color: var(--ink); font-weight: 700; margin-bottom: 16px; }
-.section-head { max-width: 640px; margin-bottom: 52px; }
-.section-head p { font-size: 18px; }
-
-/* Services */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
-.card {
-  background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 28px; transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
-}
-.card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: #d9d6ef; }
-.icon {
-  width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center;
-  background: var(--purple-soft); color: var(--purple); margin-bottom: 20px;
-}
-.card:nth-child(even) .icon { background: var(--coral-soft); color: var(--coral); }
-.icon svg { width: 22px; height: 22px; }
-.card h3 { font-size: 18px; color: var(--ink); margin-bottom: 8px; letter-spacing: -0.2px; }
-.card p { font-size: 15.5px; }
-
-/* Process */
-.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: step; }
-.step { position: relative; padding-top: 22px; border-top: 2px solid var(--border); }
-.step::before {
-  counter-increment: step; content: '0' counter(step);
-  display: block; font-size: 14px; font-weight: 700; color: var(--purple); margin-bottom: 10px;
-}
-.step:hover { border-top-color: var(--purple); }
-.step h3 { font-size: 18px; color: var(--ink); margin-bottom: 6px; }
-.step p { font-size: 15.5px; }
 
 /* Contact */
 .contact-card {
@@ -208,14 +178,12 @@ h2 { font-size: clamp(30px, 4vw, 42px); line-height: 1.15; letter-spacing: -1px;
   .hero { padding: 72px 0 64px; }
   .hero .container, .contact-card { grid-template-columns: 1fr; }
   .hero-visual { justify-self: center; max-width: 340px; }
-  .steps { grid-template-columns: 1fr 1fr; }
-  .section { padding: 72px 0; }
+  .section { padding: 16px 0 64px; }
   .contact-card { padding: 44px 28px; }
 }
 @media (max-width: 560px) {
   body { font-size: 16px; }
   .container { padding: 0 16px; }
-  .steps { grid-template-columns: 1fr; }
   .header .btn { display: none; }
   .lead { font-size: 17px; }
 }
